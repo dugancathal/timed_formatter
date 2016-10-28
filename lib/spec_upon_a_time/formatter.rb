@@ -18,7 +18,7 @@ module SpecUponATime
                  :pending)
     end
 
-    def failure_output(example, _exception)
+    def failure_output(example, _exception=nil)
       codes.wrap("#{current_indentation}#{example.description.strip} " \
                  "(#{run_time_for(example)}) " \
                  "(FAILED - #{next_failure_index})",
